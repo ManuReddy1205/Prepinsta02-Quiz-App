@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #fff;
+}
+.app{
+    background: rgb(198, 177, 198);
+    box-shadow: 12px 8px 20px black;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+#timer{
+    color: red;
+    font-size: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+#score{
+    font-size: 15px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.app h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.app h2{
+    margin: 10px 0;
+}
+.app hr{
+    margin: 0 0 10px 0 ;
+}
+#answer-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; 
+
+}
+.quiz .btn{
+   display: flex;
+   padding: 10px;
+   margin: 10px;
+   width: 90%;
+   border-radius: 10px;
+   cursor: pointer;
+   transform: scale(1.05);
+   transition: all .4s ease;
+   
+}
+
+.btn:hover:not([disabled]){
+    background: rgb(126, 153, 168);
+    color: #fff;
+    font-weight: bold;
+  
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+.quiz span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#next-btn{
+    background: #001e4d;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 4px 0 black;
+    
+}
+#next-btn:hover{
+    animation: infinite-color-change 2s infinite;
+}
+@keyframes infinite-color-change {
+    0% {
+        background-color: #f0f0f0;
+        color: black;
+    }
+    25% {
+        background-color: #ffcc00;
+    }
+    50% {
+        background-color: #f0f0f0;
+        color: black;
+    }
+    75% {
+        background-color: #ffcc00;
+    }
+    100% {
+        background-color: #f0f0f0;
+        color: black;
+    }
+}
+
+.correct {
+    background: rgb(139, 204, 139);
+    font-weight: bold;
+    color: #fff;
+    animation: pulse 1s infinite;
+}
+.incorrect{
+    background: rgb(218, 124, 124);
+    animation: shake 0.5s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
